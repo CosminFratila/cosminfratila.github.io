@@ -329,6 +329,9 @@
                                         <div class="product-item col-4 mb-3" v-for="(product, index) in products" :key="index">
                                             <div class="card position-relative">
                                                 <div class="product-badges position-absolute mt-2" style="z-index: 1;">
+                                                    <div class="product-badge-box product-badge-box-discount p-1 bg-danger text-white mb-2" v-if="discount">
+                                                        <span>Extra discount: -{{ discountValue }}%</span>
+                                                    </div>
                                                     <div class="product-badge-box product-badge-box-discount p-1 bg-light text-danger" v-if="index.length % 2 === 0">
                                                         <span>-20%</span>
                                                     </div>
@@ -356,22 +359,27 @@
                                                         <div class="card-section-mid">
                                                             <div class="card-body">
                                                                 <h2 class="product-title">
-                                                                    {{product.nume}}
+                                                                    {{ product.nume }}
                                                                 </h2>
                                                                 <div class="product-description">
-                                                                    din <span>{{product.material}}</span>
+                                                                    din <span>{{ product.material }}</span>
                                                                 </div>
                                                                 <div class="product-rating">
                                                                     star star star star
                                                                 </div>
                                                                 <div class="product-price product-price-has-discount">
-                                                                <span class="product-price-old">
-                                                                    <s><span class="value">{{product.pret}}</span> <span class="currency">RON</span></s>
-                                                                </span>
+                                                                    <span class="product-price-old">
+                                                                        <s><span class="value">{{ product.pret }}</span> <span class="currency">RON</span></s>
+                                                                    </span>
                                                                     <span class="product-price-separator"></span>
                                                                     <span class="product-price-new">
-                                                                    <span class="value">{{product.pretredus}}</span> <span class="currency">RON</span>
-                                                                </span>
+                                                                        <span class="value" v-if="!discount">
+                                                                            {{ product.pretredus }} RON
+                                                                        </span>
+                                                                        <span class="value" v-else>
+                                                                            {{ getPriceWithDiscount(product.pretredus) }} RON
+                                                                        </span>
+                                                                    </span>
                                                                 </div>
                                                             </div>
                                                         </div>

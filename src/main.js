@@ -18,7 +18,9 @@ var app = new Vue({
                 category: 'price',
                 value: 'asc'
             },
-            sortedProducts: []
+            sortedProducts: [],
+            discount: false,
+            discountValue: ''
         }
     },
     created() {
@@ -30,7 +32,15 @@ var app = new Vue({
         })
         .catch(e => {
             this.errors.push(e)
-        })
+        });
+
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const discount = urlParams.get('discount');
+
+        if (discount) {
+            this.setDiscount(discount);
+        }
     },
     computed: {
         getFilterInitialData() {
@@ -138,6 +148,24 @@ var app = new Vue({
             setTimeout(() => {
                 this.productsLoading = false;
             }, 500);
+        },
+
+        setDiscount(discount) {
+            if ( discount > 0 && discount <= 100 ) {
+                this.discount = true;
+                this.discountValue = discount;
+            } else {
+                this.discount = false;
+                console.error('Discount error');
+            }
+        },
+
+        getPriceWithDiscount(price) {
+            let newPrice = 0;
+
+            newPrice = Math.floor(((100 - this.discountValue) * price) / 100);
+
+            return newPrice;
         }
 
         /*randomProductImageKey(max) {
