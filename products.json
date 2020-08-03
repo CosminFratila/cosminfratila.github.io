@@ -1,92 +1,92 @@
 {
-  "produse": {
-    "sandale-flavia-passini": {
-      "nume": "Sandale Flavia Passini",
-      "sectiune": "Femei",
-      "categorie": "De vara",
-      "subcategorie": "Sandale",
-      "culoare": "galben",
-      "brand": "Flavia Passini",
-      "material": "piele naturala",
-      "imagini": [
-        "https://static.otter.ro/otter/catalog/product/s/a/sandale_flavia_passini_galbene_2103_din_piele_naturala_h8an08114dk2103999_0.jpg",
-        "https://static.otter.ro/otter/catalog/product/s/a/sandale_flavia_passini_galbene_2103_din_piele_naturala_h8an08114dk2103999_2.jpg",
-        "https://static.otter.ro/otter/catalog/product/s/a/sandale_flavia_passini_galbene_2103_din_piele_naturala_h8an08114dk2103999_3.jpg",
-        "https://static.otter.ro/otter/catalog/product/s/a/sandale_flavia_passini_galbene_2103_din_piele_naturala_h8an08114dk2103999_4.jpg",
-        "https://static.otter.ro/otter/catalog/product/s/a/sandale_flavia_passini_galbene_2103_din_piele_naturala_h8an08114dk2103999_5.jpg",
-        "https://static.otter.ro/otter/catalog/product/s/a/sandale_flavia_passini_galbene_2103_din_piele_naturala_h8an08114dk2103999_6.jpg",
-        "https://static.otter.ro/otter/catalog/product/s/a/sandale_flavia_passini_galbene_2103_din_piele_naturala_h8an08114dk2103999_7.jpg",
-        "https://static.otter.ro/otter/catalog/product/s/a/sandale_flavia_passini_galbene_2103_din_piele_naturala_h8an08114dk2103999_8.jpg"
-      ],
-      "marimi": { "36": 35, "37": 61, "38": 83, "39": 57, "40": 29 },
-      "pret": 219,
-      "pretredus": 153
-    },
-    "pantofi-sport-gryxx": {
-      "nume": "Pantofi sport Gryxx",
-      "sectiune": "Femei",
-      "categorie": "Pantofi",
-      "subcategorie": "Pantofi sport",
-      "culoare": "alb",
-      "brand": "Gryxx",
-      "material": "piele ecologica",
-      "imagini": [
-        "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_gryxx_multicolori_cobra1_din_piele_ecologica_a6ash1111dkcobra19_0.jpg",
-        "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_gryxx_multicolori_cobra1_din_piele_ecologica_a6ash1111dkcobra19_2.jpg",
-        "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_gryxx_multicolori_cobra1_din_piele_ecologica_a6ash1111dkcobra19_3.jpg",
-        "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_gryxx_multicolori_cobra1_din_piele_ecologica_a6ash1111dkcobra19_4.jpg",
-        "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_gryxx_multicolori_cobra1_din_piele_ecologica_a6ash1111dkcobra19_5.jpg",
-        "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_gryxx_multicolori_cobra1_din_piele_ecologica_a6ash1111dkcobra19_6.jpg",
-        "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_gryxx_multicolori_cobra1_din_piele_ecologica_a6ash1111dkcobra19_7.jpg",
-        "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_gryxx_multicolori_cobra1_din_piele_ecologica_a6ash1111dkcobra19_8.jpg"
-      ],
-      "marimi": { "36": 23, "37": 41, "38": 28, "39": 31, "40": 8 },
-      "pret": 299,
-      "pretredus": 224
-    },
-    "pantofi-sport-sketchers": {
-      "nume": "Pantofi sport Skechers",
-      "sectiune": "Barbati",
-      "categorie": "Pantofi",
-      "subcategorie": "Pantofi sport",
-      "culoare": "maro",
-      "brand": "Skechers",
-      "material": "piele intoarsa",
-      "imagini": [
-        "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_skechers_maro_matera_2_0_din_material_textil_si_piele_intoarsa_kzazb2111bk2320119_0.jpg",
-        "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_skechers_maro_matera_2_0_din_material_textil_si_piele_intoarsa_kzazb2111bk2320119_2.jpg",
-        "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_skechers_maro_matera_2_0_din_material_textil_si_piele_intoarsa_kzazb2111bk2320119_3.jpg",
-        "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_skechers_maro_matera_2_0_din_material_textil_si_piele_intoarsa_kzazb2111bk2320119_4.jpg",
-        "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_skechers_maro_matera_2_0_din_material_textil_si_piele_intoarsa_kzazb2111bk2320119_5.jpg",
-        "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_skechers_maro_matera_2_0_din_material_textil_si_piele_intoarsa_kzazb2111bk2320119_6.jpg",
-        "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_skechers_maro_matera_2_0_din_material_textil_si_piele_intoarsa_kzazb2111bk2320119_7.jpg",
-        "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_skechers_maro_matera_2_0_din_material_textil_si_piele_intoarsa_kzazb2111bk2320119_8.jpg"
-      ],
-      "marimi": { "40": 9, "41": 20, "42": 37, "43": 27, "44": 1, "45": 1 },
-      "pret": 299,
-      "pretredus": 194
-    },
-    "sandale-otter": {
-      "nume": "Sandale Otter",
-      "sectiune": "Barbati",
-      "categorie": "De vara",
-      "subcategorie": "Sandale",
-      "culoare": "negru",
-      "brand": "Otter",
-      "material": "piele naturala",
-      "imagini": [
-        "https://static.otter.ro/otter/catalog/product/s/a/sandale_otter_negre_180s_din_piele_naturala_ojan01114bk180s999_0.jpg",
-        "https://static.otter.ro/otter/catalog/product/s/a/sandale_otter_negre_180s_din_piele_naturala_ojan01114bk180s999_2.jpg",
-        "https://static.otter.ro/otter/catalog/product/s/a/sandale_otter_negre_180s_din_piele_naturala_ojan01114bk180s999_3.jpg",
-        "https://static.otter.ro/otter/catalog/product/s/a/sandale_otter_negre_180s_din_piele_naturala_ojan01114bk180s999_4.jpg",
-        "https://static.otter.ro/otter/catalog/product/s/a/sandale_otter_negre_180s_din_piele_naturala_ojan01114bk180s999_5.jpg",
-        "https://static.otter.ro/otter/catalog/product/s/a/sandale_otter_negre_180s_din_piele_naturala_ojan01114bk180s999_6.jpg",
-        "https://static.otter.ro/otter/catalog/product/s/a/sandale_otter_negre_180s_din_piele_naturala_ojan01114bk180s999_7.jpg",
-        "https://static.otter.ro/otter/catalog/product/s/a/sandale_otter_negre_180s_din_piele_naturala_ojan01114bk180s999_8.jpg"
-      ],
-      "marimi": { "40": 17, "41": 25, "42": 39, "43": 15, "44": 5 },
-      "pret": 229,
-      "pretredus": 148
+    "produse": {
+        "sandale-flavia-passini": {
+            "nume": "Sandale Flavia Passini",
+            "sectiune": "Femei",
+            "categorie": "De vara",
+            "subcategorie": "Sandale",
+            "culoare": "galben",
+            "brand": "Flavia Passini",
+            "material": "piele naturala",
+            "imagini": [
+                "https://static.otter.ro/otter/catalog/product/s/a/sandale_flavia_passini_galbene_2103_din_piele_naturala_h8an08114dk2103999_0.jpg",
+                "https://static.otter.ro/otter/catalog/product/s/a/sandale_flavia_passini_galbene_2103_din_piele_naturala_h8an08114dk2103999_2.jpg",
+                "https://static.otter.ro/otter/catalog/product/s/a/sandale_flavia_passini_galbene_2103_din_piele_naturala_h8an08114dk2103999_3.jpg",
+                "https://static.otter.ro/otter/catalog/product/s/a/sandale_flavia_passini_galbene_2103_din_piele_naturala_h8an08114dk2103999_4.jpg",
+                "https://static.otter.ro/otter/catalog/product/s/a/sandale_flavia_passini_galbene_2103_din_piele_naturala_h8an08114dk2103999_5.jpg",
+                "https://static.otter.ro/otter/catalog/product/s/a/sandale_flavia_passini_galbene_2103_din_piele_naturala_h8an08114dk2103999_6.jpg",
+                "https://static.otter.ro/otter/catalog/product/s/a/sandale_flavia_passini_galbene_2103_din_piele_naturala_h8an08114dk2103999_7.jpg",
+                "https://static.otter.ro/otter/catalog/product/s/a/sandale_flavia_passini_galbene_2103_din_piele_naturala_h8an08114dk2103999_8.jpg"
+            ],
+            "marimi": { "36": 35, "37": 61, "38": 83, "39": 57, "40": 29 },
+            "pret": 219,
+            "pretredus": 153
+        },
+        "pantofi-sport-gryxx": {
+            "nume": "Pantofi sport Gryxx",
+            "sectiune": "Femei",
+            "categorie": "Pantofi",
+            "subcategorie": "Pantofi sport",
+            "culoare": "alb",
+            "brand": "Gryxx",
+            "material": "piele ecologica",
+            "imagini": [
+                "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_gryxx_multicolori_cobra1_din_piele_ecologica_a6ash1111dkcobra19_0.jpg",
+                "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_gryxx_multicolori_cobra1_din_piele_ecologica_a6ash1111dkcobra19_2.jpg",
+                "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_gryxx_multicolori_cobra1_din_piele_ecologica_a6ash1111dkcobra19_3.jpg",
+                "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_gryxx_multicolori_cobra1_din_piele_ecologica_a6ash1111dkcobra19_4.jpg",
+                "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_gryxx_multicolori_cobra1_din_piele_ecologica_a6ash1111dkcobra19_5.jpg",
+                "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_gryxx_multicolori_cobra1_din_piele_ecologica_a6ash1111dkcobra19_6.jpg",
+                "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_gryxx_multicolori_cobra1_din_piele_ecologica_a6ash1111dkcobra19_7.jpg",
+                "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_gryxx_multicolori_cobra1_din_piele_ecologica_a6ash1111dkcobra19_8.jpg"
+            ],
+            "marimi": { "36": 23, "37": 41, "38": 28, "39": 31, "40": 8 },
+            "pret": 299,
+            "pretredus": 224
+        },
+        "pantofi-sport-sketchers": {
+            "nume": "Pantofi sport Skechers",
+            "sectiune": "Barbati",
+            "categorie": "Pantofi",
+            "subcategorie": "Pantofi sport",
+            "culoare": "maro",
+            "brand": "Skechers",
+            "material": "piele intoarsa",
+            "imagini": [
+                "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_skechers_maro_matera_2_0_din_material_textil_si_piele_intoarsa_kzazb2111bk2320119_0.jpg",
+                "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_skechers_maro_matera_2_0_din_material_textil_si_piele_intoarsa_kzazb2111bk2320119_2.jpg",
+                "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_skechers_maro_matera_2_0_din_material_textil_si_piele_intoarsa_kzazb2111bk2320119_3.jpg",
+                "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_skechers_maro_matera_2_0_din_material_textil_si_piele_intoarsa_kzazb2111bk2320119_4.jpg",
+                "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_skechers_maro_matera_2_0_din_material_textil_si_piele_intoarsa_kzazb2111bk2320119_5.jpg",
+                "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_skechers_maro_matera_2_0_din_material_textil_si_piele_intoarsa_kzazb2111bk2320119_6.jpg",
+                "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_skechers_maro_matera_2_0_din_material_textil_si_piele_intoarsa_kzazb2111bk2320119_7.jpg",
+                "https://static.otter.ro/otter/catalog/product/p/a/pantofi_sport_skechers_maro_matera_2_0_din_material_textil_si_piele_intoarsa_kzazb2111bk2320119_8.jpg"
+            ],
+            "marimi": { "40": 9, "41": 20, "42": 37, "43": 27, "44": 1, "45": 1 },
+            "pret": 299,
+            "pretredus": 194
+        },
+        "sandale-otter": {
+            "nume": "Sandale Otter",
+            "sectiune": "Barbati",
+            "categorie": "De vara",
+            "subcategorie": "Sandale",
+            "culoare": "negru",
+            "brand": "Otter",
+            "material": "piele naturala",
+            "imagini": [
+                "https://static.otter.ro/otter/catalog/product/s/a/sandale_otter_negre_180s_din_piele_naturala_ojan01114bk180s999_0.jpg",
+                "https://static.otter.ro/otter/catalog/product/s/a/sandale_otter_negre_180s_din_piele_naturala_ojan01114bk180s999_2.jpg",
+                "https://static.otter.ro/otter/catalog/product/s/a/sandale_otter_negre_180s_din_piele_naturala_ojan01114bk180s999_3.jpg",
+                "https://static.otter.ro/otter/catalog/product/s/a/sandale_otter_negre_180s_din_piele_naturala_ojan01114bk180s999_4.jpg",
+                "https://static.otter.ro/otter/catalog/product/s/a/sandale_otter_negre_180s_din_piele_naturala_ojan01114bk180s999_5.jpg",
+                "https://static.otter.ro/otter/catalog/product/s/a/sandale_otter_negre_180s_din_piele_naturala_ojan01114bk180s999_6.jpg",
+                "https://static.otter.ro/otter/catalog/product/s/a/sandale_otter_negre_180s_din_piele_naturala_ojan01114bk180s999_7.jpg",
+                "https://static.otter.ro/otter/catalog/product/s/a/sandale_otter_negre_180s_din_piele_naturala_ojan01114bk180s999_8.jpg"
+            ],
+            "marimi": { "40": 17, "41": 25, "42": 39, "43": 15, "44": 5 },
+            "pret": 229,
+            "pretredus": 148
+        }
     }
-  }
 }
