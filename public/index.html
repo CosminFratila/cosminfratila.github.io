@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Salamander Romania - Sandale, Pantofi, Mocasini sau Balerini de la branduri internationale la preturi accesibile." />
+    <meta name="keywords" content="sandale, pantofi piele, mocasini piele, incaltaminte piele, incaltaminte dama, balerini piele, pantofi femei" />
+    <meta name="robots" content="INDEX,FOLLOW" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="icon" href="../src/resources/static/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../src/resources/static/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <title>Salamander Romania - Sandale, Pantofi, Balerini sau Mocasini de la branduri internationale la preturi accesibile.</title>
+</head>
+
+<body>
+    <noscript>
+        <strong>We're sorry but this site doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app" class="main-container-outer">
+        <div class="top-bar">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="top-bar-info col">
+                        <div class="d-flex">
+                            <div>tel: (123) 456 789</div>
+                            <div class="ml-3">mail: <a href="mailto:contact@salamandershop.ro">contact@salamandershop.ro</a></div>
+                        </div>
+                    </div>
+                    <div class="top-bar-social col">
+                        <div class="d-flex justify-content-end">
+                            <div>f</div>
+                            <div class="ml-3">i</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-main py-3">
+            <div class="container">
+                <div class="navbar-inner d-flex align-items-center w-100">
+                    <div class="navbar-branding pr-5">
+                        <div class="navbar-trigger" style="display: none;">
+                            <a href="javascript: void(0)" class="btn main-megamenu-trigger" title="Toggle menu">
+                                <i class="em em-burger"></i>
+                            </a>
+                        </div>
+                        <a class="navbar-brand" href="/">
+                            <img src="../src/resources/logo.png" alt="Salamander">
+                        </a>
+                    </div>
+                    <div class="navbar-menu flex-grow-1 px-3">
+                        <div class="row">
+                            <div class="col">
+                                <a href="javascript: void(0)">Femei</a>
+                            </div>
+                            <div class="col">
+                                <a href="javascript: void(0)">Barbati</a>
+                            </div>
+                            <div class="col">
+                                <a href="javascript: void(0)">Accesorii</a>
+                            </div>
+                            <div class="col">
+                                <a href="javascript: void(0)">Summer Sale</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navbar-toolbox pl-5">
+                        <a href="javascript: void(0)" class="btn navbar-search-trigger">
+                            search
+                        </a>
+                        <a href="javascript: void(0)" class="btn navbar-account-trigger">
+                            account
+                        </a>
+                        <a href="javascript: void(0)" class="btn navbar-cart-trigger">
+                            cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="megamenu-container mt-3">
+            <div class="megamenu">
+
+            </div>
+        </div>
+
+        <div class="main-container-inner">
+            <div class="breadcrumbs">
+                <div class="container">
+                    <a href="/">Home</a>
+                    <span class="separator"> | </span>
+                    <a href="/">Incaltaminte barbati</a>
+                    <span class="separator"> | </span>
+                    <a href="/" class="active">Ghete</a>
+                </div>
+            </div>
+
+            <main class="main-container mt-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="shop-filter col-4">
+                            <h2>Filtreaza produsele</h2>
+                            <h5>active filter: {{filterActive}}</h5>
+                            <div class="shop-filer-group dropdown">
+                                <a href="">Categorie v</a>
+                                <div class="shop-filer-list">
+                                    <div v-for="category in getFilterInitialData.categories">
+                                        <button tabindex="0" type="button" role="button" class="btn" @click="updateFilter('categorie', category)">
+                                            {{ category }}
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shop-filer-group dropdown">
+                                <a href="">Sex v</a>
+                                <div class="shop-filer-list">
+                                    <div v-for="section in getFilterInitialData.sections">
+                                        <button tabindex="0" type="button" role="button" class="btn" @click="updateFilter('sectiune', section)">
+                                            {{ sectionsFormat(section) }}
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shop-filer-group chip">
+                                <a href="">Marime v</a>
+                                <div class="shop-filer-list">
+                                    <div v-for="size in getFilterInitialData.sizes">
+                                        <button tabindex="0" type="button" role="button" class="btn" @click="updateFilter('marimi', size)">
+                                            {{ size }}
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shop-filer-group dropdown">
+                                <a href="">Culoare v</a>
+                                <div v-for="color in getFilterInitialData.colors">
+                                    <button tabindex="0" type="button" role="button" class="btn" @click="updateFilter('culoare', color)">
+                                        {{ color }}
+                                    </button>
+                                </div>
+                                <a href="" class="show-more">Vezi mai multe culori >></a>
+                            </div>
+                            <div class="shop-filer-group dropdown">
+                                <a href="">Material v</a>
+                                <div v-for="material in getFilterInitialData.materials">
+                                    <button tabindex="0" type="button" role="button" class="btn" @click="updateFilter('material', material)">
+                                        {{ material }}
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="shop-filer-group dropdown">
+                                <a href="">Brand v</a>
+                                <div v-for="brand in getFilterInitialData.brands">
+                                    <button tabindex="0" type="button" role="button" class="btn" @click="updateFilter('brand', brand)">
+                                        {{ brand }}
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="shop-filer-group range-bar">
+                                <a href="">Pret</a>
+                                <div class="shop-filter-by-price">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page-container col-8">
+                            <div class="listing-panel">
+                                <div class="listing-panel-heading">
+                                    <h1 class="listing-page-title">
+                                        <span class="title"></span>
+                                        <span class="count">{{Object.keys(products).length}} {{Object.keys(products).length > 1 ? 'produse' : 'produs'}}</span>
+                                    </h1>
+                                </div>
+                                <div class="d-flex justify-content-center" v-if="productsLoading">
+                                    <div class="spinner-border" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>
+                                </div>
+                                <div class="listing-products-wrapper" v-else>
+                                    <div class="listing-panel-content row">
+                                        <div class="listing-panel-pagination col">
+                                            <a href="">1</a>
+                                            <a href="">2</a>
+                                            <span>...</span>
+                                            <a href="">25</a>
+                                        </div>
+                                        <div class="listing-panel-sort col">
+                                            <span class="control-label hidden-xs hidden-sm">Sorteaza dupa:</span>
+                                            <button tabindex="0" type="button" role="button" class="btn">
+                                                <span class="sort-control-btn-title">Sorteaza dupa</span>
+                                                <span class="sort-control-btn-option text-truncate">Pret crescator</span>
+                                            </button>
+                                            <div class="listing-sorting-dropdown">
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <a href="" data-sort-id="price" data-sort-dir="asc">Pret crescator</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" data-sort-id="price" data-sort-dir="desc">Pret descrescator</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" data-sort-id="name" data-sort-dir="asc">Alfabetic crescator</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" data-sort-id="name" data-sort-dir="desc">Alfabetic descrescator</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="listing-products row" v-if="Object.keys(products).length > 0">
+                                        <div class="product-item col-4" v-for="(product, index) in products" :key="index">
+                                            <div class="product-badges">
+                                                <div class="product-badge-box product-badge-box-discount">
+                                                    <span>-20%</span>
+                                                </div>
+                                                <div class="product-badge-box product-badge-box-new">
+                                                    <span>Nou</span>
+                                                </div>
+                                                <div class="product-badge-box product-badge-box-exclusive">
+                                                    <span>Exclusiv online</span>
+                                                </div>
+                                            </div>
+                                            <div class="product-add-to-favourites">
+                                                <button tabindex="0" type="button" role="button" class="btn" title="Add to favourites">
+                                                    <i aria-hidden="true" role="presentation" class="fas fa-heart"></i>
+                                                </button>
+                                            </div>
+                                            <div class="card">
+                                                <a href="/">
+                                                    <div class="card-section-wrapper">
+                                                        <div class="card-heading" style="padding: 16px;">
+                                                            <div class="thumbnail overflow-hidden" style="position: relative;">
+                                                                <div style="padding-bottom: 100%;"></div>
+                                                                <div class="thumbnail-image" style="background-size: contain; background-position: 50% 50%; background-repeat: no-repeat; position: absolute; top: 0; left: 0; right: 0; bottom: 0;" :style="{ backgroundImage: `url(${product.imagini[randomProductImageKey]})` }"></div>
+                                                                <div class="q-img__content absolute-full"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-section-mid">
+                                                            <div class="card-body">
+                                                                <h2 class="product-title">
+                                                                    {{product.nume}}
+                                                                </h2>
+                                                                <div class="product-description">
+                                                                    din <span>{{product.material}}</span>
+                                                                </div>
+                                                                <div class="product-rating">
+                                                                    star star star star
+                                                                </div>
+                                                                <div class="product-price product-price-has-discount">
+                                                                <span class="product-price-old">
+                                                                    <s><span class="value">{{product.pret}}</span> <span class="currency">RON</span></s>
+                                                                </span>
+                                                                    <span class="product-price-separator"></span>
+                                                                    <span class="product-price-new">
+                                                                    <span class="value">{{product.pretredus}}</span> <span class="currency">RON</span>
+                                                                </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="listing-products-empty" v-else>
+                                        Nu exista produse conform criteriilor selectate.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+    <script src="../src/main.js"></script>
+</body>
+
+</html>
