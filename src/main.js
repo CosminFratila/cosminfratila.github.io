@@ -4,6 +4,7 @@ var app = new Vue({
         return{
             pageLoaded: false,
             productsLoading: true,
+            initialProducts: [],
             products: [],
             errors: [],
             randomProductImageKey: 0,
@@ -12,14 +13,20 @@ var app = new Vue({
                 category: [],
                 value: []
             },
-            filteredProducts: []
+            filteredProducts: [],
+            sortActive: {
+                category: 'price',
+                value: 'asc'
+            },
+            sortedProducts: []
         }
     },
     created() {
         axios.get(`https://cosminfratila.github.io/products.json`)
         .then(response => {
             // JSON responses are automatically parsed.
-            this.products = response.data.produse
+            this.initialProducts = response.data.produse;
+            this.products = response.data.produse;
         })
         .catch(e => {
             this.errors.push(e)
@@ -68,8 +75,10 @@ var app = new Vue({
     },
     mounted() {
         this.randomProductImageKey = Math.floor(Math.random() * 8);
-        this.pageLoaded = true;
-        this.productsLoading = false;
+        setTimeout(() => {
+            this.pageLoaded = true;
+            this.productsLoading = false;
+        }, 500);
     },
     methods: {
         sectionsFormat(section) {
@@ -107,8 +116,24 @@ var app = new Vue({
 
                 this.products = this.filteredProducts;
             } else {
-                console.log('Show initial products');
+                this.products = this.initialProducts;
             }
+
+            setTimeout(() => {
+                this.productsLoading = false;
+            }, 500);
+        },
+
+        updateSort(sortCategory, sortValue) {
+            /*TODO make sort*/
+
+            this.productsLoading = true;
+
+            console.log(sortCategory);
+            console.log(sortValue);
+
+            this.sortActive.value = sortValue;
+            this.sortActive.category = sortCategory;
 
             setTimeout(() => {
                 this.productsLoading = false;

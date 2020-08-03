@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://kit.fontawesome.com/d4958f7507.js" crossorigin="anonymous"></script>
 
     <title>Salamander Romania - Sandale, Pantofi, Balerini sau Mocasini de la branduri internationale la preturi accesibile.</title>
 </head>
@@ -27,16 +28,24 @@
         <div class="top-bar">
             <div class="container">
                 <div class="row justify-content-between">
-                    <div class="top-bar-info col">
+                    <div class="top-bar-info col pt-2 pb-2">
                         <div class="d-flex">
-                            <div>tel: (123) 456 789</div>
-                            <div class="ml-3">mail: <a href="mailto:contact@salamandershop.ro">contact@salamandershop.ro</a></div>
+                            <div><i class="fas fa-phone-alt"></i> (123) 456 789</div>
+                            <div class="ml-3"><i class="fas fa-envelope"></i> <a href="mailto:contact@salamandershop.ro">contact@salamandershop.ro</a></div>
                         </div>
                     </div>
                     <div class="top-bar-social col">
                         <div class="d-flex justify-content-end">
-                            <div>f</div>
-                            <div class="ml-3">i</div>
+                            <div>
+                                <a href="javascript: void(0)" class="btn" title="Ne vedem pe Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </div>
+                            <div class="ml-3">
+                                <a href="javascript: void(0)" class="btn" title="Ne vedem pe Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -52,7 +61,7 @@
                                 <i class="em em-burger"></i>
                             </a>
                         </div>
-                        <a class="navbar-brand" href="/">
+                        <a class="navbar-brand" href="javascript: void(0)">
                             <img src="../src/resources/logo.png" alt="Salamander">
                         </a>
                     </div>
@@ -74,109 +83,192 @@
                     </div>
                     <div class="navbar-toolbox pl-5">
                         <a href="javascript: void(0)" class="btn navbar-search-trigger">
-                            search
+                            <i class="fas fa-search"></i>
                         </a>
                         <a href="javascript: void(0)" class="btn navbar-account-trigger">
-                            account
+                            <i class="far fa-user"></i>
                         </a>
                         <a href="javascript: void(0)" class="btn navbar-cart-trigger">
-                            cart
+                            <i class="fas fa-shopping-bag"></i>
                         </a>
                     </div>
                 </div>
             </div>
         </nav>
 
-        <div class="megamenu-container mt-3">
+        <!--TODO add mobile menu-->
+        <!--<div class="megamenu-container">
             <div class="megamenu">
-
             </div>
-        </div>
+        </div>-->
 
-        <div class="main-container-inner">
+        <div class="main-container-inner mt-3">
             <div class="breadcrumbs">
                 <div class="container">
-                    <a href="/">Home</a>
+                    <a href="javascript: void(0)">Home</a>
                     <span class="separator"> | </span>
-                    <a href="/">Incaltaminte barbati</a>
+                    <a href="javascript: void(0)">Incaltaminte barbati</a>
                     <span class="separator"> | </span>
-                    <a href="/" class="active">Ghete</a>
+                    <a href="javascript: void(0)" class="active">Ghete</a>
                 </div>
             </div>
 
-            <main class="main-container mt-3">
+            <main class="main-container mt-3 mb-5">
                 <div class="container">
                     <div class="row">
-                        <div class="shop-filter col-4">
+                        <div class="shop-filter col-4 pr-4">
                             <h2>Filtreaza produsele</h2>
-                            <h5>active filter: {{filterActive}}</h5>
-                            <div class="shop-filer-group dropdown">
-                                <a href="">Categorie v</a>
-                                <div class="shop-filer-list">
+                            <div class="shop-filer-group mt-3">
+                                <div>
+                                    <a href="#collapseFilterCategory" aria-expanded="false" aria-controls="collapseFilterCategory" data-toggle="collapse" >
+                                        Categorie
+                                    </a>
+                                </div>
+                                <div class="shop-filer-list collapse show" id="collapseFilterCategory">
                                     <div v-for="category in getFilterInitialData.categories">
-                                        <button tabindex="0" type="button" role="button" class="btn" @click="updateFilter('categorie', category)">
+                                        <button
+                                            tabindex="0"
+                                            type="button"
+                                            role="button"
+                                            class="btn"
+                                            :class="{ 'font-weight-bold': _.includes(filterActive.value, category) }"
+                                            @click="updateFilter('categorie', category)"
+                                        >
                                             {{ category }}
                                         </button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="shop-filer-group dropdown">
-                                <a href="">Sex v</a>
-                                <div class="shop-filer-list">
+                            <div class="shop-filer-group mt-3">
+                                <div>
+                                    <a href="#collapseFilterSection" aria-expanded="false" aria-controls="collapseFilterSection" data-toggle="collapse" >
+                                        Sex
+                                    </a>
+                                </div>
+                                <div class="shop-filer-list collapse show" id="collapseFilterSection">
                                     <div v-for="section in getFilterInitialData.sections">
-                                        <button tabindex="0" type="button" role="button" class="btn" @click="updateFilter('sectiune', section)">
+                                        <button
+                                            tabindex="0"
+                                            type="button"
+                                            role="button"
+                                            class="btn"
+                                            :class="{ 'font-weight-bold': _.includes(filterActive.value, section) }"
+                                            @click="updateFilter('sectiune', section)"
+                                        >
                                             {{ sectionsFormat(section) }}
                                         </button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="shop-filer-group chip">
-                                <a href="">Marime v</a>
-                                <div class="shop-filer-list">
-                                    <div v-for="size in getFilterInitialData.sizes">
-                                        <button tabindex="0" type="button" role="button" class="btn" @click="updateFilter('marimi', size)">
+                            <div class="shop-filer-group mt-3">
+                                <div>
+                                    <a href="#collapseFilterSize" aria-expanded="false" aria-controls="collapseFilterSize" data-toggle="collapse" >
+                                        Marime
+                                    </a>
+                                </div>
+                                <div class="shop-filer-list collapse show row" id="collapseFilterSize">
+                                    <div class="col-2 pt-2" v-for="size in getFilterInitialData.sizes">
+                                        <button
+                                            tabindex="0"
+                                            type="button"
+                                            role="button"
+                                            class="btn btn-outline-dark"
+                                            :class="{ 'active': _.includes(filterActive.value, size) }"
+                                            @click="updateFilter('marimi', size)"
+                                        >
                                             {{ size }}
                                         </button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="shop-filer-group dropdown">
-                                <a href="">Culoare v</a>
-                                <div v-for="color in getFilterInitialData.colors">
-                                    <button tabindex="0" type="button" role="button" class="btn" @click="updateFilter('culoare', color)">
-                                        {{ color }}
-                                    </button>
+                            <div class="shop-filer-group mt-3">
+                                <div>
+                                    <a href="#collapseFilterColor" aria-expanded="false" aria-controls="collapseFilterColor" data-toggle="collapse" >
+                                        Culoare
+                                    </a>
                                 </div>
-                                <a href="" class="show-more">Vezi mai multe culori >></a>
-                            </div>
-                            <div class="shop-filer-group dropdown">
-                                <a href="">Material v</a>
-                                <div v-for="material in getFilterInitialData.materials">
-                                    <button tabindex="0" type="button" role="button" class="btn" @click="updateFilter('material', material)">
-                                        {{ material }}
-                                    </button>
+                                <div class="shop-filer-list collapse show" id="collapseFilterColor">
+                                    <div v-for="color in getFilterInitialData.colors">
+                                        <button
+                                            tabindex="0"
+                                            type="button"
+                                            role="button"
+                                            class="btn"
+                                            :class="{ 'font-weight-bold': _.includes(filterActive.value, color) }"
+                                            @click="updateFilter('culoare', color)"
+                                        >
+                                            {{ color }}
+                                        </button>
+                                    </div>
+                                    <!--TODO add view more colors-->
+                                    <div class="pl-3">
+                                        <a href="javascript: void(0)" class="show-more">Vezi mai multe culori</a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="shop-filer-group dropdown">
-                                <a href="">Brand v</a>
-                                <div v-for="brand in getFilterInitialData.brands">
-                                    <button tabindex="0" type="button" role="button" class="btn" @click="updateFilter('brand', brand)">
-                                        {{ brand }}
-                                    </button>
+                            <div class="shop-filer-group mt-3">
+                                <div>
+                                    <a href="#collapseFilterMaterial" aria-expanded="false" aria-controls="collapseFilterMaterial" data-toggle="collapse" >
+                                        Material
+                                    </a>
+                                </div>
+                                <div class="shop-filer-list collapse show" id="collapseFilterMaterial">
+                                    <div v-for="material in getFilterInitialData.materials">
+                                        <button
+                                            tabindex="0"
+                                            type="button"
+                                            role="button"
+                                            class="btn"
+                                            :class="{ 'font-weight-bold': _.includes(filterActive.value, material) }"
+                                            @click="updateFilter('material', material)"
+                                        >
+                                            {{ material }}
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="shop-filer-group range-bar">
-                                <a href="">Pret</a>
-                                <div class="shop-filter-by-price">
+                            <div class="shop-filer-group mt-3">
+                                <div>
+                                    <a href="#collapseFilterBrand" aria-expanded="false" aria-controls="collapseFilterBrand" data-toggle="collapse" >
+                                        Brand
+                                    </a>
+                                </div>
+                                <div class="shop-filer-list collapse show" id="collapseFilterBrand">
+                                    <div v-for="brand in getFilterInitialData.brands">
+                                        <button
+                                            tabindex="0"
+                                            type="button"
+                                            role="button"
+                                            class="btn"
+                                            :class="{ 'font-weight-bold': _.includes(filterActive.value, brand) }"
+                                            @click="updateFilter('brand', brand)"
+                                        >
+                                            {{ brand }}
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shop-filer-group mt-3">
+                                <div>
+                                    <a href="#collapseFilterPrice" aria-expanded="false" aria-controls="collapseFilterPrice" data-toggle="collapse" >
+                                        Pret
+                                    </a>
+                                </div>
+                                <div class="shop-filer-list collapse show" id="collapseFilterPrice">
+                                    <div class="row justify-content-between">
+                                        <div class="col">0 RON</div>
+                                        <div class="col text-right">peste 500 RON</div>
+                                    </div>
+                                    <input type="range" class="custom-range" min="0" max="500">
                                 </div>
                             </div>
                         </div>
-                        <div class="page-container col-8">
+                        <div class="page-container col-8 pl-4">
                             <div class="listing-panel">
                                 <div class="listing-panel-heading">
                                     <h1 class="listing-page-title">
-                                        <span class="title"></span>
-                                        <span class="count">{{Object.keys(products).length}} {{Object.keys(products).length > 1 ? 'produse' : 'produs'}}</span>
+                                        <span class="title">Barbati</span>
+                                        <span class="count h4 text-secondary">{{Object.keys(products).length}} {{Object.keys(products).length > 1 ? 'produse' : 'produs'}}</span>
                                     </h1>
                                 </div>
                                 <div class="d-flex justify-content-center" v-if="productsLoading">
@@ -187,56 +279,73 @@
                                 <div class="listing-products-wrapper" v-else>
                                     <div class="listing-panel-content row">
                                         <div class="listing-panel-pagination col">
-                                            <a href="">1</a>
-                                            <a href="">2</a>
-                                            <span>...</span>
-                                            <a href="">25</a>
+                                            <a href="javascript: void(0)" class="btn btn-outline-dark">1</a>
+                                            <a href="javascript: void(0)" class="btn btn-outline-dark">2</a>
+                                            <span class="pl-2 pr-2">...</span>
+                                            <a href="javascript: void(0)" class="btn btn-outline-dark">25</a>
                                         </div>
                                         <div class="listing-panel-sort col">
-                                            <span class="control-label hidden-xs hidden-sm">Sorteaza dupa:</span>
-                                            <button tabindex="0" type="button" role="button" class="btn">
-                                                <span class="sort-control-btn-title">Sorteaza dupa</span>
-                                                <span class="sort-control-btn-option text-truncate">Pret crescator</span>
-                                            </button>
-                                            <div class="listing-sorting-dropdown">
-                                                <ul class="dropdown-menu">
-                                                    <li>
-                                                        <a href="" data-sort-id="price" data-sort-dir="asc">Pret crescator</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="" data-sort-id="price" data-sort-dir="desc">Pret descrescator</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="" data-sort-id="name" data-sort-dir="asc">Alfabetic crescator</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="" data-sort-id="name" data-sort-dir="desc">Alfabetic descrescator</a>
-                                                    </li>
-                                                </ul>
+                                            <div class="row justify-content-end align-items-center">
+                                                <span class="control-label">Sorteaza dupa:</span>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        Pret crescator
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <button
+                                                            type="button"
+                                                            class="dropdown-item btn btn-light"
+                                                            @click="updateSort('price', 'asc')"
+                                                        >
+                                                            Pret crescator
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="dropdown-item btn btn-light"
+                                                            @click="updateSort('price', 'desc')"
+                                                        >
+                                                            Pret descrescator
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="dropdown-item btn btn-light"
+                                                            @click="updateSort('name', 'asc')"
+                                                        >
+                                                            Alfabetic crescator
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="dropdown-item btn btn-light"
+                                                            @click="updateSort('name', 'desc')"
+                                                        >
+                                                            Alfabetic descrescator
+                                                        </button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="listing-products row" v-if="Object.keys(products).length > 0">
-                                        <div class="product-item col-4" v-for="(product, index) in products" :key="index">
-                                            <div class="product-badges">
-                                                <div class="product-badge-box product-badge-box-discount">
-                                                    <span>-20%</span>
+                                    <div class="listing-products row mt-5" v-if="Object.keys(products).length > 0">
+                                        <div class="product-item col-4 mb-3" v-for="(product, index) in products" :key="index">
+                                            <div class="card position-relative">
+                                                <div class="product-badges position-absolute mt-2" style="z-index: 1;">
+                                                    <div class="product-badge-box product-badge-box-discount p-1 bg-light text-danger" v-if="index.length % 2 === 0">
+                                                        <span>-20%</span>
+                                                    </div>
+                                                    <div class="product-badge-box product-badge-box-new p-1 bg-light text-success" v-else>
+                                                        <span>Nou</span>
+                                                    </div>
+                                                    <div class="product-badge-box product-badge-box-exclusive p-1 bg-light mt-2">
+                                                        <span>Exclusiv online</span>
+                                                    </div>
                                                 </div>
-                                                <div class="product-badge-box product-badge-box-new">
-                                                    <span>Nou</span>
+                                                <div class="product-add-to-favourites position-absolute" style="right: 0; z-index: 1;">
+                                                    <button tabindex="0" type="button" role="button" class="btn" title="Add to favourites">
+                                                        <i class="far fa-heart"></i>
+                                                    </button>
                                                 </div>
-                                                <div class="product-badge-box product-badge-box-exclusive">
-                                                    <span>Exclusiv online</span>
-                                                </div>
-                                            </div>
-                                            <div class="product-add-to-favourites">
-                                                <button tabindex="0" type="button" role="button" class="btn" title="Add to favourites">
-                                                    <i aria-hidden="true" role="presentation" class="fas fa-heart"></i>
-                                                </button>
-                                            </div>
-                                            <div class="card">
-                                                <a href="/">
-                                                    <div class="card-section-wrapper">
+                                                <a href="javascript: void(0)">
+                                                    <div class="card-section-wrapper pt-5">
                                                         <div class="card-heading" style="padding: 16px;">
                                                             <div class="thumbnail overflow-hidden" style="position: relative;">
                                                                 <div style="padding-bottom: 100%;"></div>
@@ -271,7 +380,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="listing-products-empty" v-else>
+                                    <div class="listing-products-empty mt-5" v-else>
                                         Nu exista produse conform criteriilor selectate.
                                     </div>
                                 </div>
@@ -279,7 +388,6 @@
                         </div>
                     </div>
                 </div>
-
             </main>
         </div>
     </div>
